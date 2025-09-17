@@ -1,1 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #272727 ;
+  color: #ffffff;
+  font-family: barlow, arial, sans-serif;
+}
 
+.title-link{
+  all: unset;
+  color: #ffffff;
+}
+.title-link:hover{
+  cursor: pointer;
+  color: rgba(255,255, 255, 0.5);
+}
