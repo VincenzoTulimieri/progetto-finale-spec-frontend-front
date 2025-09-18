@@ -8,7 +8,20 @@ body{
   color: #ffffff;
   font-family: barlow, arial, sans-serif;
 }
+img{
+  width: 100%;
+  display: block;
+}
 
+
+/* img classe bootstrap */
+.card-img-top {
+  height: 300px;
+  object-fit: cover; 
+}
+
+
+/* header */
 .title-link{
   all: unset;
   color: #ffffff;
@@ -17,3 +30,6 @@ body{
   cursor: pointer;
   color: rgba(255,255, 255, 0.5);
 }
+
+
+
