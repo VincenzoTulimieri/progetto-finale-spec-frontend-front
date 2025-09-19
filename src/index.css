@@ -12,6 +12,9 @@ img{
   width: 100%;
   display: block;
 }
+h1{
+  color: #d9d9d9;
+}
 
 
 /* img classe bootstrap */
@@ -71,6 +74,10 @@ header{
 }
 
 /* card */
+.card{
+  border: 1px solid #d9d9d9;
+  background-color: #d9d9d9;
+}
 .card:hover{
   cursor: pointer;
   transform: translateY(-10px);
