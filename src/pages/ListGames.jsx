@@ -35,6 +35,7 @@ export default function ListGames() {
     // Stati 
     const [searchQueryTitle, setSearchQueryTitle] = useState('')
     const [searchQueryCategory, setSearchQueryCategory] = useState('')
+    const [sortOrder, setSortOrder] = useState('')
 
     // debounce di setSearchQuery
     const debounceSearch = useCallback(debounce(setSearchQueryTitle, 500), [])
@@ -45,20 +46,33 @@ export default function ListGames() {
 
     // filtri e ordinamento
     const filteredGames = useMemo(() => {
-        return games.filter(game => {
+        let orderedList = games.filter(game => {
             const isInTitle = game.title.trim().toLowerCase().includes(searchQueryTitle.toLowerCase())
             const isInCategory = searchQueryCategory === '' || game.category === searchQueryCategory
             return isInTitle && isInCategory
         })
-    }, [games, searchQueryTitle, searchQueryCategory])
+        if(sortOrder === 'asc'){
+            orderedList.sort((a,b)=> a.title.localeCompare(b.title))
+        }else if(sortOrder === 'desc'){
+            orderedList.sort((a,b)=> b.title.localeCompare(a.title))
+        }
+
+        return orderedList
+
+    }, [games, searchQueryTitle, searchQueryCategory, sortOrder])
 
     return (
         <>
             <div className="container-input-title">
                 <h1>I Nostri Giochi</h1>
                 <div className="d-flex gap-3">
+                    <select value={sortOrder} onChange={(e)=> setSortOrder(e.target.value)} className="form-select">
+                        <option value="">Ordina per</option>
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
                     <select value={searchQueryCategory} onChange={(e)=> setSearchQueryCategory(e.target.value)} className="form-select">
-                        <option value="">---</option>
+                        <option value="">Scegli Categoria</option>
                         {categoryGames.map(c => <option key={c.id} value={c.value}>{c.value}</option>)}
                     </select>
                     <input type="text" onChange={(e) => debounceSearch(e.target.value)} className="form-control" placeholder="Cerca Titolo" />
