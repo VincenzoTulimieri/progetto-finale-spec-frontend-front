@@ -1,6 +1,6 @@
 import Card from "../components/Card"
 import { GlobalContext } from "../context/GlobalContext"
-import { useContext, useMemo, useState, useCallback } from "react"
+import React, { useContext, useMemo, useState, useCallback } from "react"
 
 // funzione di debounce
 function debounce(callback, delay) {
@@ -39,6 +39,9 @@ export default function ListGames() {
     // debounce di setSearchQuery
     const debounceSearch = useCallback(debounce(setSearchQueryTitle, 500), [])
 
+    // memo
+    const CardMemo = React.memo(Card)
+
 
     // filtri e ordinamento
     const filteredGames = useMemo(() => {
@@ -65,9 +68,8 @@ export default function ListGames() {
                 <div className="row row-cols-2 g-3">
                     {filteredGames.map((game) => {
                         return (
-                            <Card key={game.id} game={game} />
+                            <CardMemo key={game.id} game={game} />
                         )
-
                     })}
                 </div>
             </div>
