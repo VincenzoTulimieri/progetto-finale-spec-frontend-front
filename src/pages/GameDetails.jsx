@@ -1,9 +1,10 @@
 import useGame from "../hook/useGame"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export default function CardGame() {
     const { id } = useParams()
     const { gameDetails } = useGame(id)
+    const navigate = useNavigate()
     console.log(gameDetails)
 
 
@@ -23,7 +24,8 @@ export default function CardGame() {
                                 <p className="card-text"><strong>Genere:</strong> {gameDetails?.category}</p>
                                 <p className="card-text"><strong>Descrizione:</strong> {gameDetails?.description}</p>
                                 <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
-                                <button className="button-position vt-btn btn-color">aggiungi ai preferiti</button>
+                                <button className="vt-btn btn-color vt-btn-details" onClick={()=> navigate('/')}>Indietro</button>
+                                <i className="fa-regular fa-heart vt-heart vt-heart-details"></i>
                             </div>
                         </div>
                     </div>

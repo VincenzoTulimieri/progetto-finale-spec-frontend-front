@@ -96,27 +96,49 @@ main{
   background-color: #d9d9d9;
 }
 .card-hover:hover{
-  cursor: pointer;
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition:  0.5s;
 }
-
+.img-hover:hover{
+  cursor: pointer;
+}
 
 .vt-btn{
   all: unset;
-  border-radius: 5px;
-  border: 1px solid #272727;
-  padding: 2px;
   position: absolute;
-  bottom: 5px;
-  right: 2px;
+  bottom: 10px;
+  right: 50px;
+  border-radius: 10px;
+  border: 1px solid #272727;
+  padding: 0px 10px;
+}
+.vt-btn-details{
+  bottom: 10px;
+  right: 60px;
+  font-size: 17px;
+  padding: 3px 10px;
+}
+
+.vt-heart{
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 25px;
+  color: #ff5400;
+}
+.vt-heart-details{
+  font-size: 35px;
+}
+.vt-heart:hover{
+  cursor: pointer;
 }
 .btn-color{
   color: #272727;
   background-color: #ff5400;
 }
 .btn-color:hover{
+  cursor: pointer;
   opacity: 0.5;
 }
 
