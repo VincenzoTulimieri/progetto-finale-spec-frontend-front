@@ -53,7 +53,21 @@ header{
 
 /* input */
 .form-control{
-  width: 15%;
+  width: 100%;
+  background-color: #ff5400;
+  border: #272727;
+  color: #272727
+}
+.form-control:focus{
+  background-color: #ff5400;
+  color: #272727
+}
+.form-select{
+  background-color: #ff5400;
+  border: #272727;
+}
+.form-select:focus{
+  background-color: #ff5400;
 }
 
 /* card */
@@ -73,7 +87,7 @@ header{
   right: 2px;
 }
 .btn-color{
-  color: #ffffff;
+  color: #272727;
   background-color: #ff5400;
 }
 .btn-color:hover{
