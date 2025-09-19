@@ -1,13 +1,10 @@
 import useGame from "../hook/useGame"
 
 
-
 export default function Card({ game }) {
     const gameId = game.id
-    const { gameFetch } = useGame(gameId)
-    const gameDetails = gameFetch.product
+    const { gameDetails } = useGame(gameId)
     console.log(gameDetails)
-
 
     return (
         <>
@@ -17,11 +14,13 @@ export default function Card({ game }) {
                         <div className="col-6">
                             <img src={gameDetails?.imageUrl} className="card-img-top" alt="..." />
                         </div>
-                        <div className="card-body col-6">
-                            <h5 className="card-title">{gameDetails?.title}</h5>
-                            <p className="card-text"></p>
-                            <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div className="card-body col-4">
+                            <h5 className="card-title mb-4">{gameDetails?.title}</h5>
+                            <p className="card-text"><strong>Casa Prodrutrice:</strong> {gameDetails?.publisher}</p>
+                            <p className="card-text"><strong>Piattaforma:</strong> <small className="text-body-secondary">{gameDetails?.platform}</small></p>
+                            <button className="button-position vt-btn btn-color">aggiungi ai preferiti</button>
                         </div>
+                       
                     </div>
                 </div>
             </div>

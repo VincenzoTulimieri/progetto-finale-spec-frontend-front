@@ -20,8 +20,26 @@ img{
   object-fit: cover; 
 }
 
+/* container */
+.container-input-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 
 /* header */
+header{
+  background-image: url(''); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  min-height: 50vh; 
+  margin-bottom: 20px; 
+  padding: 0; 
+}
 .title-link{
   all: unset;
   color: #ffffff;
@@ -31,5 +49,35 @@ img{
   color: rgba(255,255, 255, 0.5);
 }
 
+/* main */
+
+/* input */
+.form-control{
+  width: 15%;
+}
+
+/* card */
+.card:hover{
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition:  0.5s;
+}
+.vt-btn{
+  all: unset;
+  border-radius: 5px;
+  border: 1px solid #272727;
+  padding: 2px;
+  position: absolute;
+  bottom: 5px;
+  right: 2px;
+}
+.btn-color{
+  color: #ffffff;
+  background-color: #ff5400;
+}
+.btn-color:hover{
+  opacity: 0.5;
+}
 
 
