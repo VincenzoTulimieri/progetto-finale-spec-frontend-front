@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ListGames from './pages/ListGames'
 import DefaultLayout from './layout/DefaultLayout'
 import { GlobalProvider } from './context/GlobalContext'
-import CardGame from './pages/CardGame'
+import CardGame from './pages/GameDetails'
 
 function App() {
 
