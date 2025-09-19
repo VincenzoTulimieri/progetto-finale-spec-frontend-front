@@ -1,7 +1,35 @@
-export default function CardGame(){
-    return(
+import useGame from "../hook/useGame"
+import { useParams } from "react-router-dom"
+
+export default function CardGame() {
+    const { id } = useParams()
+    const { gameDetails } = useGame(id)
+    console.log(gameDetails)
+
+
+    return (
         <>
-        <h1>qui il game</h1>
+            <div className="container-card-details">
+                <div class="card mb-3">
+                    <div className="card">
+                        <div className="row g-0">
+                            <div className="col-4">
+                                <img src={gameDetails?.imageUrl} className="card-img-top vt-card-img-top" alt="..." />
+                            </div>
+                            <div className="card-body col-6">
+                                <h5 className="card-title mb-4">{gameDetails?.title}</h5>
+                                <p className="card-text"><strong>Casa Prodrutrice:</strong> {gameDetails?.publisher}</p>
+                                <p className="card-text"><strong>Piattaforma:</strong> <small className="text-body-secondary">{gameDetails?.platform}</small></p>
+                                <p className="card-text"><strong>Genere:</strong> {gameDetails?.category}</p>
+                                <p className="card-text"><strong>Descrizione:</strong> {gameDetails?.description}</p>
+                                <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
+                                <button className="button-position vt-btn btn-color">aggiungi ai preferiti</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }
