@@ -63,7 +63,7 @@ export default function ListGames() {
             </div>
             <div>
                 <div className="row row-cols-2 g-3">
-                    {filteredGames && filteredGames.map((game) => {
+                    {filteredGames.map((game) => {
                         return (
                             <Card key={game.id} game={game} />
                         )
