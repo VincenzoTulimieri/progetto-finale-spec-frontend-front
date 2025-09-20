@@ -8,15 +8,13 @@ export default function Card({ game }) {
     const { gameDetails } = useGame(gameId)
 
 
-    const provaClick = () => {
-        console.log('si puo fare')
-    }
+    
 
 
 
     return (
         <>
-            <div className="col-4 mb-3 position-relative">
+            <div className="col-12 col-mb-6 col-lg-4 mb-3">
                 <div className="card h-100 card-hover">
                     <div className="row g-0">
                         <div className="col-6">
