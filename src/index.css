@@ -121,8 +121,8 @@ main {
 
 .card-hover:hover {
   transform: translateY(-10px);
-
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 1);
+  /* box-shadow: 0 5px 15px rgba(255, 255, 255, 1); */
+  box-shadow: 0 5px 15px rgba(255, 84, 0, 1);;
   transition: 0.5s;
 }
 
@@ -166,8 +166,6 @@ main {
 
 .vt-heart:hover {
   cursor: pointer;
-  box-shadow: 0 2px #666;
-  transform: translateY(3px);
 }
 
 .btn-color {
@@ -184,4 +182,20 @@ main {
 }
 .img-compare{
   object-fit: contain;
+}
+
+.vt-btn-compare{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.vt-btn-compare:hover{
+  cursor: pointer;
+  background-color: #e54c00;
+}
+
+.vt-btn-compare:disabled{
+  background-color: #e54c00; 
+  color: #272727;
+  cursor: not-allowed; 
+  opacity: 0.6;
 }
