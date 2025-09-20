@@ -55,6 +55,7 @@ export default function ListGames() {
 
     // filtri e ordinamento
     const filteredGames = useMemo(() => {
+        if(!games) return []
         let orderedList = games.filter(game => {
             const isInTitle = game.title.trim().toLowerCase().includes(searchQueryTitle.toLowerCase())
             const isInCategory = searchQueryCategory === '' || game.category === searchQueryCategory
@@ -73,12 +74,11 @@ export default function ListGames() {
 
     // funzioni di confronto 
 
-    const toggleSelect = (id) => {
+    const toggleSelect = useCallback((id) => {
         setSelectedId(prev => {
-           return prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+            return prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
         })
-
-    }
+    }, [])
 
     const handlerCompare = () =>{
         if(selectedId.length == 2){

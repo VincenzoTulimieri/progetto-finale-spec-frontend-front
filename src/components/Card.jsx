@@ -7,10 +7,6 @@ export default function Card({ game, toggleSelect, isSelected }) {
     const gameId = game?.id
     const { gameDetails } = useGame(gameId)
     console.log(gameDetails)
-    if (!gameDetails) return <div className="card-loading">Caricamento...</div>
-
-
-
 
     return (
         <>
