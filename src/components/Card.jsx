@@ -16,9 +16,7 @@ export default function Card({ game, toggleSelect, isSelected }) {
         <>
             <div className="col-12 col-mb-6 col-lg-4 mb-3">
                 <div className="card h-100 card-hover">
-                    <div className="p-2">
-                        <input type="checkbox" checked={isSelected} onChange={() => toggleSelect(gameId)} />
-                    </div>
+                    <input type="checkbox" checked={isSelected} onChange={() => toggleSelect(gameId)} className="vt-position-checkbox form-check-input" />
                     <div className="row g-0">
                         <div className="col-6">
                             <Link to={`/products/${gameId}`} className="unset">
