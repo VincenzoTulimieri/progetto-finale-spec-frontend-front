@@ -3,6 +3,7 @@ import ListGames from './pages/ListGames'
 import DefaultLayout from './layout/DefaultLayout'
 import { GlobalProvider } from './context/GlobalContext'
 import CardGame from './pages/GameDetails'
+import ComparePage from './pages/ComparePage'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
             <Route element={<DefaultLayout />}>
               <Route path='/' element={<ListGames />} />
               <Route path='/products/:id' element={<CardGame />} />
-              <Route />
+              <Route path='/compare/:id1/:id2' element={<ComparePage/>}/>
             </Route>
           </Routes>
         </BrowserRouter>

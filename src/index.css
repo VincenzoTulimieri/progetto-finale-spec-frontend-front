@@ -174,3 +174,14 @@ main {
   color: #272727;
   background-color: #ff5400;
 }
+
+
+/* confronto */
+.highlight {
+  background-color: #ff5400; 
+  border-radius: 10px;
+  padding: 4px 6px;
+}
+.img-compare{
+  object-fit: contain;
+}
