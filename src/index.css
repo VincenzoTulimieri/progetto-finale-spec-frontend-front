@@ -100,7 +100,7 @@ main {
 
 .form-control:focus {
   background-color: #ff5400;
-  color: #272727
+  color: #272727;
 }
 
 .form-select {
@@ -122,7 +122,7 @@ main {
 .card-hover:hover {
   transform: translateY(-10px);
   /* box-shadow: 0 5px 15px rgba(255, 255, 255, 1); */
-  box-shadow: 0 5px 15px rgba(255, 84, 0, 1);;
+  box-shadow: 0 5px 15px rgba(255, 84, 0, 1);
   transition: 0.5s;
 }
 
@@ -185,8 +185,9 @@ main {
 }
 
 .vt-btn-compare{
-  padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid #272727;
+  padding: 10px 15px;
 }
 .vt-btn-compare:hover{
   cursor: pointer;

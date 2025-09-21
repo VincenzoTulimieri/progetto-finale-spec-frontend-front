@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import useGame from "../hook/useGame"
 import CompareCard from "../components/CompareCard"
 
@@ -7,6 +7,8 @@ export default function CamparePage() {
     const { id1, id2 } = useParams()
     const { gameDetails: gameData1 } = useGame(id1)
     const { gameDetails: gameData2 } = useGame(id2)
+
+    const navigate = useNavigate()
 
 
     return (
@@ -18,6 +20,9 @@ export default function CamparePage() {
                 ) : (
                     <p>Caricamento...</p>
                 )}
+                <div className="text-center">
+                    <button className="vt-btn-compare btn-color" onClick={()=>navigate('/')}>Indietro</button>
+                </div>
             </div>
         </>
     )

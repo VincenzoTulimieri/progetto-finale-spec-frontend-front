@@ -6,7 +6,7 @@ export default function CompareCard({ game1, game2 }) {
     }
 
     return (
-        <div className="row">
+        <div className="row mb-5">
             <div className="col-6">
                 <div className="card h-100 p-3">
                     <img src={game1.imageUrl} alt={game1.title} className="card-img-top mb-3 img-compare"
