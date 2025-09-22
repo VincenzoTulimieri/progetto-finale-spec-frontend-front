@@ -35,7 +35,7 @@ export default function Card({ game, toggleSelect, isSelected,setIsOpen }) {
                             <p className="card-text"><strong>Genere:</strong> {game.category}</p>
                             <Link to={`/products/${game.id}`} className="vt-btn btn-color ">Dettgli</Link>
                             <button className="vt-heart" onClick={()=> handlerWishlistClick(true)}>
-                                <i className="fa-regular fa-heart"></i>
+                                {inWishlist(game.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                             </button>
                         </div>
                     </div>
