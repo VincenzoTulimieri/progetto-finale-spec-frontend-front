@@ -1,17 +1,32 @@
 import useGame from "../hook/useGame"
 import { useParams, useNavigate } from "react-router-dom"
+import { GlobalContext } from "../context/GlobalContext"
+import { useContext } from "react"
+
 
 export default function CardGame() {
+    // gamse details
     const { id } = useParams()
     const { gameDetails } = useGame(id)
     const navigate = useNavigate()
     console.log(gameDetails)
 
+    // attivazione wishlist in card details 
+    const { addItemWishlist, removeItemWishlist, inWishlist, setOpen , wishlist } = useContext(GlobalContext)
+
+    const handlerWishlistClick = () => {
+        if (inWishlist(gameDetails.id)) {
+            removeItemWishlist(gameDetails.id)
+        } else {
+            addItemWishlist(gameDetails)
+            setOpen(true)
+        }
+    }
 
     return (
         <>
             <div className="container-card-details">
-                <div class="card mb-3">
+                <div className="card mb-3">
                     <div className="card">
                         <div className="row g-0">
                             <div className="col-4">
@@ -24,14 +39,15 @@ export default function CardGame() {
                                 <p className="card-text"><strong>Genere:</strong> {gameDetails?.category}</p>
                                 <p className="card-text"><strong>Descrizione:</strong> {gameDetails?.description}</p>
                                 <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
-                                <button className="vt-btn btn-color vt-btn-details" onClick={()=> navigate('/')}>Indietro</button>
-                                <button className="vt-heart"><i className="fa-regular fa-heart vt-heart-details"></i></button>
+                                <button className="vt-btn btn-color vt-btn-details" onClick={() => navigate('/')}>Indietro</button>
+                                <button className=" vt-heart vt-heart-details" onClick={() => handlerWishlistClick()}>
+                                    {inWishlist(gameDetails?.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

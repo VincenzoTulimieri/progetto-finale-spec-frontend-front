@@ -27,14 +27,14 @@ export default function Card({ game, toggleSelect, isSelected,setIsOpen }) {
                     <div className="row g-0">
                         <div className="col-6">
                             <Link to={`/products/${game.id}`} className="unset">
-                                <img src={game.image} className="card-img-top img-hover" alt="..." />
+                                <img src={game.imageUrl} className="card-img-top img-hover" alt="..." />
                             </Link>
                         </div>
                         <div className="card-body col-4">
                             <h5 className="card-title mb-4">{game.title}</h5>
                             <p className="card-text"><strong>Genere:</strong> {game.category}</p>
                             <Link to={`/products/${game.id}`} className="vt-btn btn-color ">Dettgli</Link>
-                            <button className="vt-heart" onClick={()=> handlerWishlistClick(true)}>
+                            <button className="vt-heart" onClick={()=> handlerWishlistClick()}>
                                 {inWishlist(game.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                             </button>
                         </div>
