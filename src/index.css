@@ -218,3 +218,15 @@ main {
   padding: 2px;
   border: 1px solid #ff5400;
 }
+
+/* wishlist */
+.btn-remove{
+  all: unset;
+  color: #e54c00;
+}
+.font-icon{
+  font-size: 20px;
+}
+.vt-text-color{
+  color: #e54c00;
+}

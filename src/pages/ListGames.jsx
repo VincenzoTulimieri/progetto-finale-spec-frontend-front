@@ -2,6 +2,7 @@ import Card from "../components/Card"
 import { GlobalContext } from "../context/GlobalContext"
 import React, { useContext, useMemo, useState, useCallback } from "react"
 import { useNavigate } from "react-router-dom";
+import WishlistComponents from "../components/WishlistComponets";
 
 
 // funzione di debounce
@@ -17,9 +18,9 @@ function debounce(callback, delay) {
 
 export default function ListGames() {
     // context per i games
-    const { games } = useContext(GlobalContext)
+    const { games, open, setOpen, wishlist, removeItemWishlist } = useContext(GlobalContext)
     console.log(games)
-  
+
     // navigate
     const navigate = useNavigate()
 
@@ -55,7 +56,7 @@ export default function ListGames() {
 
     // filtri e ordinamento
     const filteredGames = useMemo(() => {
-        if(!games) return []
+        if (!games) return []
         let orderedList = games.filter(game => {
             const isInTitle = game.title.trim().toLowerCase().includes(searchQueryTitle.toLowerCase())
             const isInCategory = searchQueryCategory === '' || game.category === searchQueryCategory
@@ -80,8 +81,8 @@ export default function ListGames() {
         })
     }, [])
 
-    const handlerCompare = () =>{
-        if(selectedId.length == 2){
+    const handlerCompare = () => {
+        if (selectedId.length == 2) {
             return navigate(`/compare/${selectedId[0]}/${selectedId[1]}`)
         }
     }
@@ -108,11 +109,18 @@ export default function ListGames() {
                 <div className="row row-cols-2 g-3">
                     {filteredGames.map((game) => {
                         return (
-                            <CardMemo key={game.id} game={game} toggleSelect={toggleSelect} isSelected= {selectedId.includes(game.id)} />
+                            <CardMemo 
+                            key={game.id} 
+                            game={game} 
+                            toggleSelect={toggleSelect} 
+                            isSelected={selectedId.includes(game.id)}
+                            isOpen={open} setIsOpen={setOpen}
+                            />
                         )
                     })}
                 </div>
             </div>
+            <WishlistComponents isOpen={open} setIsOpen={setOpen} wishlist={wishlist} game={games} removeItemWishlist={removeItemWishlist}/>
         </>
     )
 }

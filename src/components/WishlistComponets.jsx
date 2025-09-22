@@ -1,13 +1,13 @@
-export default function WishlistComponents({ isOpen, setIsOpen, wishlist }) {
+export default function WishlistComponents({ isOpen, setIsOpen, wishlist, removeItemWishlist }) {
     return (
         <>
-            <div className={`offcanvas offcanvas-end ${isOpen ? "show" : ""}`}  id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div className={`offcanvas offcanvas-end ${isOpen ? "show" : ""}`} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <h5 className="offcanvas-title vt-text-color" id="offcanvasRightLabel">Wishlist</h5>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setIsOpen(false)}></button>
                 </div>
                 <div className="offcanvas-body">
-                    <h1 className="text-dark">I tuoi Giochi</h1>
+                    <h2 className="mb-5">I tuoi Giochi</h2>
                     {wishlist.map(game => {
                         console.log(game)
                         return (
@@ -19,7 +19,9 @@ export default function WishlistComponents({ isOpen, setIsOpen, wishlist }) {
                                     <p className="mb-3"><strong>Piattaforma:</strong> {game.platform}</p>
                                     <p className="mb-3"><strong>Prezzo:</strong> {game.price} €</p>
                                     <div className="text-end">
-                                        <button>rimuovi</button>
+                                        <button className="btn-remove" onClick={() => removeItemWishlist(game.id)}>
+                                            <i class="fa-solid fa-trash font-icon"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

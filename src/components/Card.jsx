@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom"
+import { GlobalContext } from "../context/GlobalContext"
+import { useContext } from "react"
 
+export default function Card({ game, toggleSelect, isSelected,setIsOpen }) {
+    const {addItemWishlist, removeItemWishlist, inWishlist} = useContext(GlobalContext)
 
-export default function Card({ game, toggleSelect, isSelected }) {
-
+    const handlerWishlistClick = () =>{
+        if(inWishlist(game.id)){
+            removeItemWishlist(game.id)
+        }else{
+            addItemWishlist(game)
+            setIsOpen(true)
+        }
+    }
 
     return (
         <>
@@ -24,12 +34,12 @@ export default function Card({ game, toggleSelect, isSelected }) {
                             <h5 className="card-title mb-4">{game.title}</h5>
                             <p className="card-text"><strong>Genere:</strong> {game.category}</p>
                             <Link to={`/products/${game.id}`} className="vt-btn btn-color ">Dettgli</Link>
-                            <button className="vt-heart"><i className="fa-regular fa-heart"></i></button>
-                            
+                            <button className="vt-heart" onClick={()=> handlerWishlistClick(true)}>
+                                <i className="fa-regular fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     )
