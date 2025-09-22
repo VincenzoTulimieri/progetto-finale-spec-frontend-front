@@ -25,7 +25,7 @@ export default function CardGame() {
                                 <p className="card-text"><strong>Descrizione:</strong> {gameDetails?.description}</p>
                                 <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
                                 <button className="vt-btn btn-color vt-btn-details" onClick={()=> navigate('/')}>Indietro</button>
-                                <i className="fa-regular fa-heart vt-heart vt-heart-details"></i>
+                                <button className="vt-heart"><i className="fa-regular fa-heart vt-heart-details"></i></button>
                             </div>
                         </div>
                     </div>

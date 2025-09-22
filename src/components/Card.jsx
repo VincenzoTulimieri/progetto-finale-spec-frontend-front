@@ -24,7 +24,8 @@ export default function Card({ game, toggleSelect, isSelected }) {
                             <h5 className="card-title mb-4">{game.title}</h5>
                             <p className="card-text"><strong>Genere:</strong> {game.category}</p>
                             <Link to={`/products/${game.id}`} className="vt-btn btn-color ">Dettgli</Link>
-                            <i className="fa-regular fa-heart vt-heart"></i>
+                            <button className="vt-heart"><i className="fa-regular fa-heart"></i></button>
+                            
                         </div>
                     </div>
                 </div>
