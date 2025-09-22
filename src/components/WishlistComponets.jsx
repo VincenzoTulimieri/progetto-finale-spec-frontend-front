@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react"
 export default function WishlistComponents({ isOpen, setIsOpen, wishlist, removeItemWishlist }) {
-    const wishlistRef = useRef(null)
 
+    // funzione per la chiusura della wishlist cliccando all'esterno
+    const wishlistRef = useRef(null)
     useEffect(() => {
         const handlerClickOutside = (event) => {
             if (wishlistRef.current && !wishlistRef.current.contains(event.target)) {
@@ -18,7 +19,6 @@ export default function WishlistComponents({ isOpen, setIsOpen, wishlist, remove
         }
     }, [isOpen, setIsOpen])
 
-
     return (
         <>
             <div ref={wishlistRef} className={`offcanvas offcanvas-end ${isOpen ? "show" : ""}`} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -34,7 +34,7 @@ export default function WishlistComponents({ isOpen, setIsOpen, wishlist, remove
                             return (
                                 <div key={game.id} className="col-12 mb-3">
                                     <div className="card h-100 p-3">
-                                        <img src={game.image} alt={game.title} className="card-img-top mb-3 img-compare" />
+                                        <img src={game.imageUrl} alt={game.title} className="card-img-top mb-3 img-compare" />
                                         <h5 className="card-title">{game.title}</h5>
                                         <p className="mb-3"><strong>Genere:</strong> {game.category}</p>
                                         <p className="mb-3"><strong>Piattaforma:</strong> {game.platform}</p>
