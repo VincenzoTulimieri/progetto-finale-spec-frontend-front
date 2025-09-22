@@ -14,7 +14,7 @@ export default function useGames() {
                         const resDetails = await fetch(`${VITE_URL_API}/products/${game.id}`)
                         const dataDetails = await resDetails.json()
                         const dataImg = dataDetails.product
-                        return {...game, image: dataImg.imageUrl}
+                        return {...game, image: dataImg.imageUrl, price: dataImg.price, platform: dataImg.platform, publisher: dataImg.publisher}
                     })
                 )
                 setGames(dataWithImg)
