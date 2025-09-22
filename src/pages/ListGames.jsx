@@ -2,8 +2,6 @@ import Card from "../components/Card"
 import { GlobalContext } from "../context/GlobalContext"
 import React, { useContext, useMemo, useState, useCallback } from "react"
 import { useNavigate } from "react-router-dom";
-import WishlistComponents from "../components/WishlistComponets";
-
 
 // funzione di debounce
 function debounce(callback, delay) {
@@ -109,18 +107,17 @@ export default function ListGames() {
                 <div className="row row-cols-2 g-3">
                     {filteredGames.map((game) => {
                         return (
-                            <CardMemo 
-                            key={game.id} 
-                            game={game} 
-                            toggleSelect={toggleSelect} 
-                            isSelected={selectedId.includes(game.id)}
-                            isOpen={open} setIsOpen={setOpen}
+                            <CardMemo
+                                key={game.id}
+                                game={game}
+                                toggleSelect={toggleSelect}
+                                isSelected={selectedId.includes(game.id)}
+                                isOpen={open} setIsOpen={setOpen}
                             />
                         )
                     })}
                 </div>
             </div>
-            <WishlistComponents isOpen={open} setIsOpen={setOpen} wishlist={wishlist} game={games} removeItemWishlist={removeItemWishlist}/>
         </>
     )
 }
