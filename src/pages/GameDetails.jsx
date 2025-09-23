@@ -40,7 +40,7 @@ export default function CardGame() {
                                 <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
                                 <button className="vt-btn btn-color vt-btn-details" onClick={() => navigate('/')}>Indietro</button>
                                 <button className=" vt-heart vt-heart-details" onClick={() => handlerWishlistClick()}>
-                                    {inWishlist(gameDetails?.id) ? <i class="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
+                                    {inWishlist(gameDetails?.id) ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                                 </button>
                             </div>
                         </div>
