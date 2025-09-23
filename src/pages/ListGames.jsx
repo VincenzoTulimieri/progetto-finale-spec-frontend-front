@@ -16,7 +16,7 @@ function debounce(callback, delay) {
 
 export default function ListGames() {
     // context per i games
-    const { games, open, setOpen } = useContext(GlobalContext)
+    const { games } = useContext(GlobalContext)
     console.log(games)
 
     // navigate
@@ -118,7 +118,6 @@ export default function ListGames() {
                                 game={game}
                                 toggleSelect={toggleSelect}
                                 isSelected={selectedId.includes(game.id)}
-                                isOpen={open} setIsOpen={setOpen}
                             />
                         )
                     })}

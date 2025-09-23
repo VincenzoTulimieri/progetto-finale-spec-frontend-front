@@ -2,15 +2,15 @@ import { Link } from "react-router-dom"
 import { GlobalContext } from "../context/GlobalContext"
 import { useContext } from "react"
 
-export default function Card({ game, toggleSelect, isSelected,setIsOpen }) {
-    const {addItemWishlist, removeItemWishlist, inWishlist} = useContext(GlobalContext)
+export default function Card({ game, toggleSelect, isSelected}) {
+    const {addItemWishlist, removeItemWishlist, inWishlist ,setOpen} = useContext(GlobalContext)
 
     const handlerWishlistClick = () =>{
         if(inWishlist(game.id)){
             removeItemWishlist(game.id)
         }else{
             addItemWishlist(game)
-            setIsOpen(true)
+            setOpen(true)
         }
     }
 
