@@ -3,11 +3,11 @@ import useGame from "../hook/useGame"
 import CompareCard from "../components/CompareCard"
 
 export default function CamparePage() {
-    // recupero di 2 games
-    const { id1, id2 } = useParams()
-    const { gameDetails: gameData1 } = useGame(id1)
-    const { gameDetails: gameData2 } = useGame(id2)
-
+    // recupero di games da confrontare 
+    const { id1,id2, id3, id4 } = useParams()
+    const idsArray = [id1,id2,id3,id4].filter(Boolean)
+    const gamesData = idsArray.map(id => useGame(id).gameDetails).filter(Boolean)
+    console.log(gamesData)
     const navigate = useNavigate()
 
 
@@ -15,11 +15,15 @@ export default function CamparePage() {
         <>
             <div className="container">
                 <h1 className="text-center mb-5">Confronto Giochi</h1>
-                {gameData1 && gameData2 ? (
-                    <CompareCard game1={gameData1} game2={gameData2} />
+                <div className="row mb-5">
+                {gamesData.length >= 2 ? (
+                    gamesData.map((game, i) =>{
+                        return <CompareCard key={i} game={game}  allGamesData={gamesData}/>
+                    })
                 ) : (
                     <p>Caricamento...</p>
                 )}
+                </div>
                 <div className="text-center">
                     <button className="vt-btn-compare btn-color" onClick={()=>navigate('/')}>Indietro</button>
                 </div>

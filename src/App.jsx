@@ -16,7 +16,7 @@ function App() {
             <Route element={<DefaultLayout />}>
               <Route path='/' element={<ListGames />} />
               <Route path='/products/:id' element={<CardGame />} />
-              <Route path='/compare/:id1/:id2' element={<ComparePage/>}/>
+              <Route path='/compare/:id1/:id2/:id3?/:id4?' element={<ComparePage/>}/>
             </Route>
           </Routes>
         </BrowserRouter>

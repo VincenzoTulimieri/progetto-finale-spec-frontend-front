@@ -75,13 +75,19 @@ export default function ListGames() {
 
     const toggleSelect = useCallback((id) => {
         setSelectedId(prev => {
-            return prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+            if(prev.includes(id)){
+                return prev.filter(i => i !== id)
+            }else if (prev.length < 4){
+                return [...prev, id]
+            }else{
+                return prev
+            }  
         })
     }, [])
 
     const handlerCompare = () => {
-        if (selectedId.length == 2) {
-            return navigate(`/compare/${selectedId[0]}/${selectedId[1]}`)
+        if (selectedId.length >= 2) {
+            return navigate(`/compare/${selectedId.join("/")}`)
         }
     }
 
@@ -100,7 +106,7 @@ export default function ListGames() {
                         {categoryGames.map(c => <option key={c.id} value={c.value}>{c.value}</option>)}
                     </select>
                     <input type="text" onChange={(e) => debounceSearch(e.target.value)} className="form-control" placeholder="Cerca Titolo" />
-                    <button className="vt-btn-compare btn-color" disabled={selectedId.length !== 2} onClick={handlerCompare}>Confronta</button>
+                    <button className="vt-btn-compare btn-color" disabled={selectedId.length < 2 || selectedId.length > 4} onClick={handlerCompare}>Confronta</button>
                 </div>
             </div>
             <div>
