@@ -30,7 +30,6 @@ export default function WishlistComponents({ isOpen, setIsOpen, wishlist, remove
                     <h2 className="mb-5">I tuoi Giochi</h2>
                     {wishlist.length === 0 ? (<p className="vt-text-color">Nessun gioco nella lista</p>) :
                         (wishlist.map(game => {
-                            console.log(game)
                             return (
                                 <div key={game.id} className="col-12 mb-3">
                                     <div className="card h-100 p-3">
@@ -41,7 +40,7 @@ export default function WishlistComponents({ isOpen, setIsOpen, wishlist, remove
                                         <p className="mb-3"><strong>Prezzo:</strong> {game.price} €</p>
                                         <div className="text-end">
                                             <button className="btn-remove" onClick={() => removeItemWishlist(game.id)}>
-                                                <i class="fa-solid fa-trash font-icon"></i>
+                                                <i className="fa-solid fa-trash font-icon"></i>
                                             </button>
                                         </div>
                                     </div>
