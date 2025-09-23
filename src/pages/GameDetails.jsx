@@ -9,10 +9,9 @@ export default function CardGame() {
     const { id } = useParams()
     const { gameDetails } = useGame(id)
     const navigate = useNavigate()
-    console.log(gameDetails)
 
     // attivazione wishlist in card details 
-    const { addItemWishlist, removeItemWishlist, inWishlist, setOpen , wishlist } = useContext(GlobalContext)
+    const { addItemWishlist, removeItemWishlist, inWishlist, setOpen } = useContext(GlobalContext)
 
     const handlerWishlistClick = () => {
         if (inWishlist(gameDetails.id)) {

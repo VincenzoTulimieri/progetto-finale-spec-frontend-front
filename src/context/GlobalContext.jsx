@@ -7,7 +7,7 @@ export function GlobalProvider({ children }) {
     // products
     const { games } = useGames()
     
-    // wishlist
+    // wishlist e browser storage 
     const [open, setOpen] = useState(false)
 
     const [wishlist, setWishlist] = useState(() => {
