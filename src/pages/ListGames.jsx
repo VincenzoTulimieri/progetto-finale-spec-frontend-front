@@ -75,13 +75,13 @@ export default function ListGames() {
 
     const toggleSelect = useCallback((id) => {
         setSelectedId(prev => {
-            if(prev.includes(id)){
+            if (prev.includes(id)) {
                 return prev.filter(i => i !== id)
-            }else if (prev.length < 4){
+            } else if (prev.length < 4) {
                 return [...prev, id]
-            }else{
+            } else {
                 return prev
-            }  
+            }
         })
     }, [])
 
@@ -111,7 +111,7 @@ export default function ListGames() {
             </div>
             <div>
                 <div className="row row-cols-2 g-3">
-                    {filteredGames.map((game) => {
+                    {filteredGames.length > 0 ? (filteredGames.map((game) => {
                         return (
                             <CardMemo
                                 key={game.id}
@@ -120,7 +120,12 @@ export default function ListGames() {
                                 isSelected={selectedId.includes(game.id)}
                             />
                         )
-                    })}
+                    })) : (
+                        <div className="alert vt-alert-color text-center" role="alert">
+                            Nessun risultato trovato
+                        </div>
+                    )
+                    }
                 </div>
             </div>
         </>

@@ -231,3 +231,9 @@ main {
   color: #e54c00;
   font-weight: bold;
 }
+
+
+/* alert */
+.vt-alert-color{
+  background-color: #e54c00;
+}

@@ -21,7 +21,9 @@ export default function CamparePage() {
                         return <CompareCard key={i} game={game}  allGamesData={gamesData}/>
                     })
                 ) : (
-                    <p>Caricamento...</p>
+                    <div className="alert vt-alert-color text-center" role="alert">
+                            Nessun elemento da confrontare
+                    </div>
                 )}
                 </div>
                 <div className="text-center">
