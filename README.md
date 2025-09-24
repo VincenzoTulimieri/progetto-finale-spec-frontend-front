@@ -1,12 +1,37 @@
-# React + Vite
+# Visual Gaming
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue?logo=react) 
 
-Currently, two official plugins are available:
+Visual gaming simula un comparatore di videogames, utilizzando le tecnologie viste con il corso di Boolean.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Funzionalità  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🥉 Requisiti Minimi  
+- Gestione di una risorsa (`product`) definita in `types.ts`.  
+- Lista games con proprietà principali: `title` e `category`.  
+- Barra di **ricerca** per filtrare per titolo.  
+- **Filtro per categoria**.  
+- **Ordinamento** A-Z / Z-A su `title` e `category`.  
+- Pagina di **dettaglio game** con informazioni estese.  
+- **Comparatore di 2 games** affiancate.  
+- **Sistema preferiti** sempre accessibile.  
+
+### 🥈 Requisiti Consigliati  
+- Comparatore di **più 2 games** (layout adattivo).  
+- **Debounce sulla ricerca** per migliorare UX.  
+- Persistenza preferiti con `localStorage`.  
+- Gestione stati vuoti:  
+  - Nessun risultato trovato.  
+  - Lista preferiti vuota.  
+  - Nessun elemento selezionato nel comparatore.  
+
+--- 
+
+## 🛠️ Tecnologie Utilizzate  
+- **Frontend**: [React](https://reactjs.org/), [React Router](https://reactrouter.com/)  
+- **Styling**: css, Bootstrap
+- **Gestione stato**: React Hooks + Context API  
+- **Persistenza locale**: `localStorage`  
+- **Backend**: REST API (Node.js + Express / JSON Server), dati in typescript
