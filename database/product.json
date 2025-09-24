@@ -1,0 +1,360 @@
+[
+  {
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "category": "Adventure",
+    "price": 59.99,
+    "platform": "Switch",
+    "releaseDate": "2017-03-03",
+    "publisher": "Nintendo",
+    "description": "Un'avventura open world ambientata nel regno di Hyrule.",
+    "genres": [
+      "Adventure",
+      "Open World",
+      "Action RPG"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+    "id": 1,
+    "createdAt": "2025-09-17T12:09:08.070Z",
+    "updatedAt": "2025-09-17T12:09:08.070Z"
+  },
+  {
+    "title": "God of War Ragnarök",
+    "category": "Action",
+    "price": 69.99,
+    "platform": "PlayStation",
+    "releaseDate": "2022-11-09",
+    "publisher": "Sony Interactive Entertainment",
+    "description": "Kratos e Atreus affrontano gli dei nordici in un'avventura epica.",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Hack and Slash"
+    ],
+    "imageUrl": "https://images.everyeye.it/img-cover/god-of-war-ragnarok-v22-42049-320x450.webp",
+    "id": 2,
+    "createdAt": "2025-09-17T12:11:34.998Z",
+    "updatedAt": "2025-09-17T12:11:34.998Z"
+  },
+  {
+    "title": "Halo Infinite",
+    "category": "Shooter",
+    "price": 59.99,
+    "platform": "Xbox",
+    "releaseDate": "2021-12-08",
+    "publisher": "Xbox Game Studios",
+    "description": "Master Chief ritorna per affrontare una nuova minaccia.",
+    "genres": [
+      "Shooter",
+      "Sci-Fi",
+      "Multiplayer"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png",
+    "id": 3,
+    "createdAt": "2025-09-17T12:11:45.958Z",
+    "updatedAt": "2025-09-17T12:11:45.958Z"
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "category": "RPG",
+    "price": 49.99,
+    "platform": "PC",
+    "releaseDate": "2020-12-10",
+    "publisher": "CD Projekt",
+    "description": "Un RPG futuristico ambientato a Night City.",
+    "genres": [
+      "RPG",
+      "Open World",
+      "Sci-Fi"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+    "id": 4,
+    "createdAt": "2025-09-17T12:12:05.865Z",
+    "updatedAt": "2025-09-17T12:12:05.865Z"
+  },
+  {
+    "title": "Elden Ring",
+    "category": "RPG",
+    "price": 59.99,
+    "platform": "PC",
+    "releaseDate": "2022-02-25",
+    "publisher": "Bandai Namco",
+    "description": "Un soulslike open world creato da FromSoftware.",
+    "genres": [
+      "RPG",
+      "Action",
+      "Open World"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg",
+    "id": 5,
+    "createdAt": "2025-09-17T12:12:20.484Z",
+    "updatedAt": "2025-09-17T12:12:20.484Z"
+  },
+  {
+    "title": "Horizon Forbidden West",
+    "category": "Adventure",
+    "price": 69.99,
+    "platform": "PlayStation",
+    "releaseDate": "2022-02-18",
+    "publisher": "Sony Interactive Entertainment",
+    "description": "Aloy viaggia a ovest in un mondo popolato da macchine.",
+    "genres": [
+      "Adventure",
+      "RPG",
+      "Open World"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Horizon_Forbidden_West_cover_art.jpg",
+    "id": 6,
+    "createdAt": "2025-09-17T12:12:48.775Z",
+    "updatedAt": "2025-09-17T12:12:48.775Z"
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "category": "Adventure",
+    "price": 59.99,
+    "platform": "PC",
+    "releaseDate": "2018-10-26",
+    "publisher": "Rockstar Games",
+    "description": "Una storia epica nel selvaggio west.",
+    "genres": [
+      "Adventure",
+      "Open World",
+      "Action"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg",
+    "id": 7,
+    "createdAt": "2025-09-17T12:13:00.303Z",
+    "updatedAt": "2025-09-17T12:13:00.303Z"
+  },
+  {
+    "title": "Super Mario Odyssey",
+    "category": "Platform",
+    "price": 49.99,
+    "platform": "Switch",
+    "releaseDate": "2017-10-27",
+    "publisher": "Nintendo",
+    "description": "Mario esplora mondi 3D con l'aiuto del cappello Cappy.",
+    "genres": [
+      "Platform",
+      "Adventure"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/it/thumb/8/8d/Super_Mario_Odyssey.jpg/800px-Super_Mario_Odyssey.jpg",
+    "id": 8,
+    "createdAt": "2025-09-17T12:13:12.270Z",
+    "updatedAt": "2025-09-17T12:13:12.270Z"
+  },
+  {
+    "title": "Forza Horizon 5",
+    "category": "Racing",
+    "price": 59.99,
+    "platform": "Xbox",
+    "releaseDate": "2021-11-09",
+    "publisher": "Xbox Game Studios",
+    "description": "Corse open world ambientate in Messico.",
+    "genres": [
+      "Racing",
+      "Simulation",
+      "Open World"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/pt/d/dc/Capa_de_Forza_Horizon_5.jpg",
+    "id": 9,
+    "createdAt": "2025-09-17T12:13:21.520Z",
+    "updatedAt": "2025-09-17T12:13:21.520Z"
+  },
+  {
+    "title": "Spider-Man: Miles Morales",
+    "category": "Action",
+    "price": 49.99,
+    "platform": "PlayStation",
+    "releaseDate": "2020-11-12",
+    "publisher": "Sony Interactive Entertainment",
+    "description": "Miles Morales assume il ruolo di Spider-Man.",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Superhero"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a3/Spider-Man_Miles_Morales.jpeg",
+    "id": 10,
+    "createdAt": "2025-09-17T12:13:31.451Z",
+    "updatedAt": "2025-09-17T12:13:31.451Z"
+  },
+  {
+    "title": "Pokémon Scarlet",
+    "category": "RPG",
+    "price": 59.99,
+    "platform": "Switch",
+    "releaseDate": "2022-11-18",
+    "publisher": "Nintendo",
+    "description": "Un nuovo capitolo open world della serie Pokémon.",
+    "genres": [
+      "RPG",
+      "Adventure",
+      "Monster Collecting"
+    ],
+    "imageUrl": "https://media.pokemoncentral.it/wiki/c/c4/Pok%C3%A9mon_Scarlatto_boxart_ITA.png",
+    "id": 11,
+    "createdAt": "2025-09-17T12:13:40.897Z",
+    "updatedAt": "2025-09-17T12:13:40.897Z"
+  },
+  {
+    "title": "EA Sports FC 26",
+    "category": "Sports",
+    "price": 69.99,
+    "platform": "PC",
+    "releaseDate": "2025-09-27",
+    "publisher": "EA Sports",
+    "description": "La nuova edizione del celebre simulatore calcistico con licenze ufficiali.",
+    "genres": [
+      "Sports",
+      "Simulation",
+      "Multiplayer"
+    ],
+    "imageUrl": "https://images.everyeye.it/img-cover/ea-sports-fc-26-v10-54541.jpg",
+    "id": 12,
+    "createdAt": "2025-09-17T12:13:50.321Z",
+    "updatedAt": "2025-09-17T12:13:50.321Z"
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "category": "RPG",
+    "price": 39.99,
+    "platform": "PC",
+    "releaseDate": "2015-05-19",
+    "publisher": "CD Projekt",
+    "description": "Segui le avventure di Geralt di Rivia in un mondo fantasy.",
+    "genres": [
+      "RPG",
+      "Open World",
+      "Fantasy"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
+    "id": 13,
+    "createdAt": "2025-09-17T12:14:00.419Z",
+    "updatedAt": "2025-09-17T12:14:00.419Z"
+  },
+  {
+    "title": "Splatoon 3",
+    "category": "Shooter",
+    "price": 59.99,
+    "platform": "Switch",
+    "releaseDate": "2022-09-09",
+    "publisher": "Nintendo",
+    "description": "Battaglie di vernice a squadre in un mondo colorato.",
+    "genres": [
+      "Shooter",
+      "Multiplayer"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/it/0/05/Splatoon_3_Copertina.jpg",
+    "id": 14,
+    "createdAt": "2025-09-17T12:14:10.616Z",
+    "updatedAt": "2025-09-17T12:14:10.616Z"
+  },
+  {
+    "title": "Resident Evil 4 Remake",
+    "category": "Horror",
+    "price": 59.99,
+    "platform": "PlayStation",
+    "releaseDate": "2023-03-24",
+    "publisher": "Capcom",
+    "description": "Remake del classico survival horror con Leon Kennedy.",
+    "genres": [
+      "Horror",
+      "Action",
+      "Survival"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/df/Resident_Evil_4_remake_cover_art.jpg",
+    "id": 15,
+    "createdAt": "2025-09-17T12:14:22.019Z",
+    "updatedAt": "2025-09-17T12:14:22.019Z"
+  },
+  {
+    "title": "Minecraft",
+    "category": "Sandbox",
+    "price": 29.99,
+    "platform": "PC",
+    "releaseDate": "2011-11-18",
+    "publisher": "Mojang",
+    "description": "Costruisci e sopravvivi in un mondo a blocchi.",
+    "genres": [
+      "Sandbox",
+      "Survival",
+      "Creative"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/pt/9/9c/Minecraft_capa.png",
+    "id": 16,
+    "createdAt": "2025-09-17T12:14:50.324Z",
+    "updatedAt": "2025-09-17T12:14:50.324Z"
+  },
+  {
+    "title": "Animal Crossing: New Horizons",
+    "category": "Simulation",
+    "price": 49.99,
+    "platform": "Switch",
+    "releaseDate": "2020-03-20",
+    "publisher": "Nintendo",
+    "description": "Crea la tua isola e vivi una vita tranquilla.",
+    "genres": [
+      "Simulation",
+      "Social",
+      "Casual"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9b/Animal_Crossing_New_Horizons.png/800px-Animal_Crossing_New_Horizons.png",
+    "id": 17,
+    "createdAt": "2025-09-17T12:15:05.588Z",
+    "updatedAt": "2025-09-17T12:15:05.588Z"
+  },
+  {
+    "title": "Final Fantasy VII Remake",
+    "category": "RPG",
+    "price": 59.99,
+    "platform": "PlayStation",
+    "releaseDate": "2020-04-10",
+    "publisher": "Square Enix",
+    "description": "Il ritorno del leggendario JRPG in una veste moderna.",
+    "genres": [
+      "RPG",
+      "Fantasy",
+      "Action"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/ce/FFVIIRemake.png",
+    "id": 18,
+    "createdAt": "2025-09-17T12:15:23.767Z",
+    "updatedAt": "2025-09-17T12:15:23.767Z"
+  },
+  {
+    "title": "Call of Duty: Modern Warfare II",
+    "category": "Shooter",
+    "price": 69.99,
+    "platform": "PC",
+    "releaseDate": "2022-10-28",
+    "publisher": "Activision",
+    "description": "Sparatorie tattiche in scenari realistici.",
+    "genres": [
+      "Shooter",
+      "Multiplayer",
+      "Action"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4a/Call_of_Duty_Modern_Warfare_II_Key_Art.jpg",
+    "id": 19,
+    "createdAt": "2025-09-17T12:15:48.075Z",
+    "updatedAt": "2025-09-17T12:15:48.075Z"
+  },
+  {
+    "title": "Dark Souls III",
+    "category": "RPG",
+    "price": 39.99,
+    "platform": "PC",
+    "releaseDate": "2016-04-12",
+    "publisher": "Bandai Namco",
+    "description": "Un action RPG impegnativo e oscuro.",
+    "genres": [
+      "RPG",
+      "Action",
+      "Fantasy"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/bb/Dark_souls_3_cover_art.jpg",
+    "id": 20,
+    "createdAt": "2025-09-17T12:16:05.897Z",
+    "updatedAt": "2025-09-17T12:16:05.897Z"
+  }
+]
