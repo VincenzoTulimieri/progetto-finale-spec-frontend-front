@@ -9,15 +9,15 @@ export default function useGames() {
             try{
                 const res = await fetch(`${VITE_URL_API}/products`)
                 const data = await res.json()
-                const dataWithImg = await Promise.all(
+                const dataDetails = await Promise.all(
                     data.map(async(game)=>{
                         const resDetails = await fetch(`${VITE_URL_API}/products/${game.id}`)
                         const dataDetails = await resDetails.json()
-                        const dataImg = dataDetails.product
-                        return {...game, imageUrl: dataImg.imageUrl, price: dataImg.price, platform: dataImg.platform, publisher: dataImg.publisher}
+                        const dataComplete = dataDetails.product
+                        return {...game, imageUrl: dataComplete.imageUrl, price: dataComplete.price, platform: dataComplete.platform, publisher: dataComplete.publisher}
                     })
                 )
-                setGames(dataWithImg)
+                setGames(dataDetails)
             }catch(err){
                 console.error(err)
             }
