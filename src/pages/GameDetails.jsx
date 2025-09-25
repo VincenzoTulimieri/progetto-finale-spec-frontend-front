@@ -10,17 +10,9 @@ export default function CardGame() {
     const { gameDetails } = useGame(id)
     const navigate = useNavigate()
 
-    // attivazione wishlist in card details 
-    const { addItemWishlist, removeItemWishlist, inWishlist, setOpen } = useContext(GlobalContext)
+    //  wishlist dal constext
+    const { inWishlist, handlerWishlistClick } = useContext(GlobalContext)
 
-    const handlerWishlistClick = () => {
-        if (inWishlist(gameDetails.id)) {
-            removeItemWishlist(gameDetails.id)
-        } else {
-            addItemWishlist(gameDetails)
-            setOpen(true)
-        }
-    }
 
     return (
         <>
@@ -39,7 +31,7 @@ export default function CardGame() {
                                 <p className="card-text"><strong>Descrizione:</strong> {gameDetails?.description}</p>
                                 <p className="card-text"><strong>Prezzo:</strong> {gameDetails?.price}€</p>
                                 <button className="vt-btn btn-color vt-btn-details" onClick={() => navigate('/')}>Indietro</button>
-                                <button className=" vt-heart vt-heart-details" onClick={() => handlerWishlistClick()}>
+                                <button className=" vt-heart vt-heart-details" onClick={() => handlerWishlistClick(gameDetails)}>
                                     {inWishlist(gameDetails?.id) ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                                 </button>
                             </div>

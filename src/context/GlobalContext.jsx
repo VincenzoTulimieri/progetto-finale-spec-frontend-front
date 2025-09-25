@@ -6,7 +6,7 @@ export const GlobalContext = createContext()
 export function GlobalProvider({ children }) {
     // products
     const { games } = useGames()
-    
+
     // wishlist e browser storage 
     const [open, setOpen] = useState(false)
 
@@ -45,8 +45,18 @@ export function GlobalProvider({ children }) {
         return wishlist.some(g => g.id === id)
     }
 
+    // attivazione della wishlist
+    const handlerWishlistClick = (game) => {
+        if (inWishlist(game.id)) {
+            removeItemWishlist(game.id)
+        } else {
+            addItemWishlist(game)
+            setOpen(true)
+        }
+    }
+
     return (
-        <GlobalContext.Provider value={{ games, open, wishlist, setOpen, addItemWishlist, removeItemWishlist, inWishlist }}>
+        <GlobalContext.Provider value={{ games, open, wishlist, setOpen, inWishlist, removeItemWishlist, handlerWishlistClick }}>
             {children}
         </GlobalContext.Provider>
     )

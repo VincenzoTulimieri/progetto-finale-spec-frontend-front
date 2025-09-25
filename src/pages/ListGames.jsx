@@ -17,7 +17,6 @@ function debounce(callback, delay) {
 export default function ListGames() {
     // context per i games
     const { games } = useContext(GlobalContext)
-    console.log(games)
 
     // navigate
     const navigate = useNavigate()
