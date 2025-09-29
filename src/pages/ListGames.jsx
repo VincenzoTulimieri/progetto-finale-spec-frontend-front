@@ -40,7 +40,7 @@ export default function ListGames() {
     const [searchQueryCategory, setSearchQueryCategory] = useState('')
     const [sortOrder, setSortOrder] = useState('')
 
-    // stato della selzione per il confronto
+    // stato della selzione ID per il confronto
     const [selectedId, setSelectedId] = useState([])
 
 

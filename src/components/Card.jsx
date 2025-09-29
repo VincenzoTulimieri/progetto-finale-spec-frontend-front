@@ -11,10 +11,7 @@ export default function Card({ game, toggleSelect, isSelected }) {
             <div className="col-12 col-mb-6 col-lg-4 mb-3">
                 <div className="card h-100 card-hover">
                     <label>
-                        <input type="checkbox" checked={isSelected} onChange={() => toggleSelect(game.id)} onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                        }} className="vt-position-checkbox form-check-input" />
+                        <input type="checkbox" checked={isSelected} onChange={() => toggleSelect(game.id)} className="vt-position-checkbox form-check-input" />
                     </label>
                     <div className="row g-0">
                         <div className="col-6">
