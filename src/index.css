@@ -63,6 +63,12 @@ header.jumbotron {
   justify-content: flex-start;
   margin-bottom: 20px;
 }
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
 
 .jumbotron-content {
   flex: 1;

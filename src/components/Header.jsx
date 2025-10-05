@@ -17,7 +17,7 @@ export default function Header() {
             </nav>
             <div className="jumbotron-content">
                 <h2>Benvenuto su Visual Gaming</h2>
-                <p>Scopri i migliori giochi da confrontare e aggiungere in wishlist</p>
+                <p>Scopri i migliori giochi da confrontare e aggiungere alla tua Wishlist</p>
             </div>
         </header>
     )
